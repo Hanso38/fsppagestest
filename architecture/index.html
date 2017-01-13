@@ -322,7 +322,7 @@ used to create the HDB partition. It has been configured to operate in
 conjuction with a sorting process which sorts the data it writes to
 disk.</p>
 <p>The sorting process is configured to sort by sym(p#) and time, although
-this can be configured on a per-table basis in \$KDBCONFIG/sort.csv</p>
+this can be configured on a per-table basis in $KDBCONFIG/sort.csv</p>
 <h3 id="gateway">Gateway</h3>
 <p>The gateway connects to the RDB and HDB processes and runs queries
 against them. It can access a single process, or join data across
@@ -336,7 +336,7 @@ processes, including gateways. Once the report is complete the result
 can be further processed, with available actions such as emailing it out
 or writing it to a file. This has been used to implement some basic
 monitoring checks and run some end of day reports. The configuration
-file is in \$KDBCONFIG/reporter.csv.</p>
+file is in $KDBCONFIG/reporter.csv.</p>
 <h3 id="housekeeping">Housekeeping</h3>
 <p>The housekeeping process is used to maintain some of the files written
 to disk by TorQ. In the demo we use it to archive tplogs and both
@@ -348,7 +348,7 @@ rm,{KDBLOG}/,*.gz,,30
 zip,{KDBHDB}/,database20*,,1
 </code></pre>
 <p>The first line can be translated to mean ’Compress the files in the
-[KDBLOG]{}/ path, matching the *.log pattern, excluding no files and
+KDBLOG/ path, matching the *.log pattern, excluding no files and
 where the files are older than 10 days’</p>
 <p>Combined with the other lines, the system will compress process logs
 after 10 days, delete compressed process logs after 30 days and compress
@@ -358,7 +358,7 @@ local time.</p>
 <h3 id="compression">Compression</h3>
 <p>The compression process is used to periodically scan the hdb directory
 for columnar binary files to compress. The compression settings are
-defined in \$KDBCONFIG/compressionconfig.csv. This allows configuration
+defined in $KDBCONFIG/compressionconfig.csv. This allows configuration
 of compression parameters on a per table, column and age basis.</p>
 <p>It is intended to be used with a scheduling program like cron. By
 default it is a transient process as it will start up, check for files

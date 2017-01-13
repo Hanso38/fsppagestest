@@ -280,8 +280,8 @@
 <h2 id="gateway">Gateway</h2>
 <h3 id="queries">Queries</h3>
 <p>Some example queries have been implemented on the RDB an HDB processes.
-These are defined in \$KDBCODE/rdb/examplequeries.q and
-\$KDBCODE/hdb/examplequeries.q. These can be run directly on the
+These are defined in $KDBCODE/rdb/examplequeries.q and
+$KDBCODE/hdb/examplequeries.q. These can be run directly on the
 processes themselves, or from the gateway which will join the results if
 querying across processes. To test, connect to the gateway process
 running on port 6007 from q process, qcon or from an IDE. An example is
@@ -376,7 +376,7 @@ started like this:</p>
 <p>This will automatically connect to the gateway, and allow more queries
 to be run in parallel.</p>
 <h2 id="examine-the-logs">Examine the Logs</h2>
-<p>Each process writes logs to \$KDBLOG. These are standard out, standard
+<p>Each process writes logs to $KDBLOG. These are standard out, standard
 error, and usage logs. The usage logs are also stored in memory by
 default, in the .usage.usage table. The table can be used to analyze
 which queries are taking a long time, which users are sending a lot of
@@ -384,7 +384,7 @@ queries, the memory usage before and after each query, which queries are
 failing etc.</p>
 <h2 id="reports">Reports</h2>
 <p>The Reporter process has a set of default “reports” configured in
-\$KDBCONFIG/reporter.csv. These are:</p>
+$KDBCONFIG/reporter.csv. These are:</p>
 <ul>
 <li>
 <p>A memory check which runs periodically against the RDB and emails an
@@ -418,7 +418,7 @@ to be restarted to load the new configuration.</p>
 <h2 id="access-control">Access Control</h2>
 <h3 id="adding-users">Adding Users</h3>
 <p>For simplicity each process is password protected using the file
-\$KDBCONFIG/passwords/accesslist.txt file. This can be modified to have
+$KDBCONFIG/passwords/accesslist.txt file. This can be modified to have
 different access lists for each process. To add a new user, add their
 user:password combination to the file and either restart the process or
 execute</p>
